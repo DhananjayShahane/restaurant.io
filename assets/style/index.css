@@ -1,0 +1,235 @@
+:root {
+    /* Color Variables */
+    --white-color: #FFFFFF;
+    --primary-color: #f44749;
+    --secondary-color: #f3af24;
+    --section-bg-color: #F9F9F9;
+    --dark-color: #000000;
+    --title-color: #565758;
+    --news-title-color: #292828;
+    --p-color: #717275;
+    --border-color: #eaeaea;
+    /* Typography Variables */
+    --border-radius-default: .25rem;
+    --body-font-family: 'Montserrat', sans-serif;
+    --h1-font-size: 76px;
+    --h2-font-size: 56px;
+    --h3-font-size: 42px;
+    --h4-font-size: 28px;
+    --h5-font-size: 26px;
+    --h6-font-size: 22px;
+    --p-font-size: 18px;
+    --menu-font-size: 18px;
+    --category-font-size: 14px;
+    --font-weight-light: 300;
+    --font-weight-normal: 400;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+}
+
+.libre-baskerville-regular {
+    font-family: "Libre Baskerville", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+  
+.libre-baskerville-bold {
+    font-family: "Libre Baskerville", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.libre-baskerville-regular-italic {
+    font-family: "Libre Baskerville", serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+body{
+    font-family: "Libre Baskerville", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+  
+
+@media screen and (max-width: 991px){
+    /* Adjust padding for smaller screens */
+    .site-header, .section-padding {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+}
+
+/* Footer Styling */
+.site-footer {
+    background-image: url('https://www.tooplate.com/templates/2129_crispy_kitchen/images/daan-evers-tKN1WXrzQ3s-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+    position: relative;
+    color: white !important;
+}
+
+/* Overlay for Footer */
+.site-footer::before {
+    content: "";
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent); /* Adjust gradient colors and opacity as needed */
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+/* Text Color Utility Class */
+.text-white {
+    z-index: 1 !important;
+}
+
+/* Hero Section Styling */
+.hero {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Overlay for Hero Section */
+.overlay {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+/* Container for Hero Section Content */
+.hero .container {
+    position: absolute;
+    z-index: 9;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+/* Custom Video Styling */
+.custom-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+/* Carousel Styling */
+.carousel {
+    position: relative;
+}
+
+.carousel-inner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Carousel Image Styling */
+.carousel-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Carousel Caption Styling */
+.carousel-caption {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+    text-align: left;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 60px 40px;
+}
+
+/* Styling for Carousel Control Buttons */
+.hero-carousel .carousel-control-prev,
+.hero-carousel .carousel-control-next {
+    --secondary-color: #f3af24;
+    background: var(--secondary-color);
+    width: 60px;
+    height: 60px;
+    text-align: center;
+}
+
+.hero-carousel .carousel-control-next {
+    background: var(--primary-color);
+    right: 0;
+}
+
+/* Positioning and Styling for Carousel Control Buttons */
+.hero-carousel .carousel-control-prev,
+.hero-carousel .carousel-control-next {
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    opacity: 1;
+}
+
+/* Styling for Carousel Control Icons */
+.hero-carousel .carousel-control-prev-icon,
+.hero-carousel .carousel-control-next-icon {
+    background-image: none;
+    width: inherit;
+    height: inherit;
+    line-height: 60px;
+}
+
+/* Icon Styling for Carousel Control Buttons */
+.hero-carousel .carousel-control-prev-icon::before,
+.hero-carousel .carousel-control-next-icon::before {
+    font-family: bootstrap-icons;
+    display: block;
+    margin: auto;
+    font-size: var(--h5-font-size);
+    color: var(--white-color);
+}
+
+/* Styling for Container */
+.container {
+    position: absolute;
+    z-index: 9;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+/* Carousel Control Positioning */
+.carousel-control-next,
+.carousel-control-prev {
+    position: absolute;
+    top: 200px;
+    bottom: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15%;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    background: 0 0;
+    border: 0;
+    opacity: .5;
+    transition: opacity .15s ease;
+}
+
+.BgImage {
+    background-image: url('https://www.tooplate.com/templates/2129_crispy_kitchen/images/alex-haney-CAhjZmVk5H4-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 500px;
+}
