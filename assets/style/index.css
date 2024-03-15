@@ -62,7 +62,7 @@ body{
 
 /* Footer Styling */
 .site-footer {
-    background-image: url('https://www.tooplate.com/templates/2129_crispy_kitchen/images/daan-evers-tKN1WXrzQ3s-unsplash.jpg');
+    background-image: url('../imgs/footer-section-img.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -227,7 +227,7 @@ body{
 }
 
 .BgImage {
-    background-image: url('https://www.tooplate.com/templates/2129_crispy_kitchen/images/alex-haney-CAhjZmVk5H4-unsplash.jpg');
+    background-image: url('../imgs/BgImg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;

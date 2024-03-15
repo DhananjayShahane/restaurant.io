@@ -5,8 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resturant - Home </title>
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/imgs/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/imgs/favicon//favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/imgs/favicon//favicon-16x16.png">
+
     <link rel="stylesheet" href="./assets/style/output.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/flowbite/dist/flowbite.css">
+    <link rel="stylesheet" href="./assets/flowbite/dist/flowbite.min.css">
     <link rel="stylesheet" href="./assets/style/index.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
@@ -34,7 +39,7 @@
                 <!-- menu items -->
                 <div class="flex items-center lg:order-2 gap-5">
                     <a class="p-2 relative md:px-4 hover:bg-gray-50 rounded-md flex items-center gap-2"
-                        href="/src/pages/cart.html"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                        href="./pages/cart.html"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
                             aria-hidden="true" class="w-4 h-4 text-gray-700">
                             <path fill-rule="evenodd"
                                 d="M7.5 6v.75H5.513c-.96 0-1.764.724-1.865 1.679l-1.263 12A1.875 1.875 0 004.25 22.5h15.5a1.875 1.875 0 001.865-2.071l-1.263-12a1.875 1.875 0 00-1.865-1.679H16.5V6a4.5 4.5 0 10-9 0zM12 3a3 3 0 00-3 3v.75h6V6a3 3 0 00-3-3zm-3 8.25a3 3 0 106 0v-.75a.75.75 0 011.5 0v.75a4.5 4.5 0 11-9 0v-.75a.75.75 0 011.5 0v.75z"
@@ -78,7 +83,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#"
+                            <a href="#ourMenuSection"
                                 class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-gray-900 lg:p-0">Menu</a>
                         </li>
                         <li>
@@ -245,6 +250,7 @@
     </section>
     <!-- / hero section -->
 
+    <!-- Menu Section -->
     <section class="my-20 max-w-screen-xl mx-auto px-6">
 
         <div class="container-max my-6 mt-8">
@@ -322,7 +328,7 @@
             </div>
         </div>
 
-        <div class="w-full">
+        <div class="w-full" id="ourMenuSection">
             <h2 class="text-center font-bold text-orange-400 mb-lg-5 text-2xl mb-4">Our Menu</h2>
             <h1 class="text-center font-bold text-black mb-lg-5 text-4xl mb-4">
                 Menu That Always You <br> Fall In Make Love
@@ -418,8 +424,8 @@
                             <span
                                 class="bg-yellow-100 border absolute left-0 border-yellow-500 rounded-full text-yellow-500 text-sm poppins px-4 py-1 inline-block mb-4 m-2">Breakfast</span>
                             <img class="rounded-t-lg"
-                                src="https://www.tooplate.com/templates/2129_crispy_kitchen/images/breakfast/brett-jordan-8xt8-HIFqc8-unsplash.jpg"
-                                alt="product image">
+                                src="./assets/imgs/dish.jpg"
+                                alt="food Image">
                         </div>
                         <div class="px-5 pb-5 pt-4">
                             <a href="#">
@@ -463,7 +469,7 @@
                             </div>
                             <div class="flex items-center justify-between">
                                 <span class="text-2xl font-bold text-gray-900">Rs.200</span>
-                                <button
+                                <button data-modal-target="food-modal" data-modal-toggle="food-modal"
                                     class="text-white bg-orange-400 hover:bg-orange-500 font-medium rounded-full text-sm px-5 py-2.5 text-center ">
                                     Order Now
                                 </button>
@@ -476,8 +482,8 @@
                             <span
                                 class="bg-yellow-100 border absolute left-0 border-yellow-500 rounded-full text-yellow-500 text-sm poppins px-4 py-1 inline-block mb-4 m-2">Breakfast</span>
                             <img class="rounded-t-lg"
-                                src="https://www.tooplate.com/templates/2129_crispy_kitchen/images/breakfast/brett-jordan-8xt8-HIFqc8-unsplash.jpg"
-                                alt="product image">
+                                src="./assets/imgs/dish.jpg"
+                                alt="food Image">
                         </div>
                         <div class="px-5 pb-5 pt-4">
                             <a href="#">
@@ -521,7 +527,7 @@
                             </div>
                             <div class="flex items-center justify-between">
                                 <span class="text-2xl font-bold text-gray-900">Rs.200</span>
-                                <button
+                                <button data-modal-target="food-modal" data-modal-toggle="food-modal"
                                     class="text-white bg-orange-400 hover:bg-orange-500 font-medium rounded-full text-sm px-5 py-2.5 text-center ">
                                     Order Now
                                 </button>
@@ -534,8 +540,8 @@
                             <span
                                 class="bg-yellow-100 border absolute left-0 border-yellow-500 rounded-full text-yellow-500 text-sm poppins px-4 py-1 inline-block mb-4 m-2">Breakfast</span>
                             <img class="rounded-t-lg"
-                                src="https://www.tooplate.com/templates/2129_crispy_kitchen/images/breakfast/brett-jordan-8xt8-HIFqc8-unsplash.jpg"
-                                alt="product image">
+                                src="./assets/imgs/dish.jpg"
+                                alt="food Image">
                         </div>
                         <div class="px-5 pb-5 pt-4">
                             <a href="#">
@@ -579,7 +585,7 @@
                             </div>
                             <div class="flex items-center justify-between">
                                 <span class="text-2xl font-bold text-gray-900">Rs.200</span>
-                                <button
+                                <button data-modal-target="food-modal" data-modal-toggle="food-modal"
                                     class="text-white bg-orange-400 hover:bg-orange-500 font-medium rounded-full text-sm px-5 py-2.5 text-center ">
                                     Order Now
                                 </button>
@@ -592,8 +598,8 @@
                             <span
                                 class="bg-yellow-100 border absolute left-0 border-yellow-500 rounded-full text-yellow-500 text-sm poppins px-4 py-1 inline-block mb-4 m-2">Breakfast</span>
                             <img class="rounded-t-lg"
-                                src="https://www.tooplate.com/templates/2129_crispy_kitchen/images/breakfast/brett-jordan-8xt8-HIFqc8-unsplash.jpg"
-                                alt="product image">
+                                src="./assets/imgs/dish.jpg"
+                                alt="food Image">
                         </div>
                         <div class="px-5 pb-5 pt-4">
                             <a href="#">
@@ -637,7 +643,7 @@
                             </div>
                             <div class="flex items-center justify-between">
                                 <span class="text-2xl font-bold text-gray-900">Rs.200</span>
-                                <button
+                                <button data-modal-target="food-modal" data-modal-toggle="food-modal"
                                     class="text-white bg-orange-400 hover:bg-orange-500 font-medium rounded-full text-sm px-5 py-2.5 text-center ">
                                     Order Now
                                 </button>
@@ -650,8 +656,8 @@
                             <span
                                 class="bg-yellow-100 border absolute left-0 border-yellow-500 rounded-full text-yellow-500 text-sm poppins px-4 py-1 inline-block mb-4 m-2">Breakfast</span>
                             <img class="rounded-t-lg"
-                                src="https://www.tooplate.com/templates/2129_crispy_kitchen/images/breakfast/brett-jordan-8xt8-HIFqc8-unsplash.jpg"
-                                alt="product image">
+                                src="./assets/imgs/dish.jpg"
+                                alt="food Image">
                         </div>
                         <div class="px-5 pb-5 pt-4">
                             <a href="#">
@@ -695,7 +701,7 @@
                             </div>
                             <div class="flex items-center justify-between">
                                 <span class="text-2xl font-bold text-gray-900">Rs.200</span>
-                                <button
+                                <button data-modal-target="food-modal" data-modal-toggle="food-modal"
                                     class="text-white bg-orange-400 hover:bg-orange-500 font-medium rounded-full text-sm px-5 py-2.5 text-center ">
                                     Order Now
                                 </button>
@@ -708,8 +714,8 @@
                             <span
                                 class="bg-yellow-100 border absolute left-0 border-yellow-500 rounded-full text-yellow-500 text-sm poppins px-4 py-1 inline-block mb-4 m-2">Breakfast</span>
                             <img class="rounded-t-lg"
-                                src="https://www.tooplate.com/templates/2129_crispy_kitchen/images/breakfast/brett-jordan-8xt8-HIFqc8-unsplash.jpg"
-                                alt="product image">
+                                src="./assets/imgs/dish.jpg"
+                                alt="food Image">
                         </div>
                         <div class="px-5 pb-5 pt-4">
                             <a href="#">
@@ -753,7 +759,7 @@
                             </div>
                             <div class="flex items-center justify-between">
                                 <span class="text-2xl font-bold text-gray-900">Rs.200</span>
-                                <button
+                                <button data-modal-target="food-modal" data-modal-toggle="food-modal"
                                     class="text-white bg-orange-400 hover:bg-orange-500 font-medium rounded-full text-sm px-5 py-2.5 text-center ">
                                     Order Now
                                 </button>
@@ -766,8 +772,8 @@
                             <span
                                 class="bg-yellow-100 border absolute left-0 border-yellow-500 rounded-full text-yellow-500 text-sm poppins px-4 py-1 inline-block mb-4 m-2">Breakfast</span>
                             <img class="rounded-t-lg"
-                                src="https://www.tooplate.com/templates/2129_crispy_kitchen/images/breakfast/brett-jordan-8xt8-HIFqc8-unsplash.jpg"
-                                alt="product image">
+                                src="./assets/imgs/dish.jpg"
+                                alt="food Image">
                         </div>
                         <div class="px-5 pb-5 pt-4">
                             <a href="#">
@@ -811,7 +817,7 @@
                             </div>
                             <div class="flex items-center justify-between">
                                 <span class="text-2xl font-bold text-gray-900">Rs.200</span>
-                                <button
+                                <button data-modal-target="food-modal" data-modal-toggle="food-modal"
                                     class="text-white bg-orange-400 hover:bg-orange-500 font-medium rounded-full text-sm px-5 py-2.5 text-center ">
                                     Order Now
                                 </button>
@@ -829,8 +835,8 @@
                             <span
                                 class="bg-yellow-100 border absolute left-0 border-yellow-500 rounded-full text-yellow-500 text-sm poppins px-4 py-1 inline-block mb-4 m-2">Lunch</span>
                             <img class="rounded-t-lg"
-                                src="https://www.tooplate.com/templates/2129_crispy_kitchen/images/breakfast/brett-jordan-8xt8-HIFqc8-unsplash.jpg"
-                                alt="product image">
+                                src="./assets/imgs/dish.jpg"
+                                alt="food Image">
                         </div>
                         <div class="px-5 pb-5 pt-4">
                             <a href="#">
@@ -874,7 +880,7 @@
                             </div>
                             <div class="flex items-center justify-between">
                                 <span class="text-2xl font-bold text-gray-900">Rs.200</span>
-                                <button
+                                <button data-modal-target="food-modal" data-modal-toggle="food-modal"
                                     class="text-white bg-orange-400 hover:bg-orange-500 font-medium rounded-full text-sm px-5 py-2.5 text-center ">
                                     Order Now
                                 </button>
@@ -887,8 +893,8 @@
                             <span
                                 class="bg-yellow-100 border absolute left-0 border-yellow-500 rounded-full text-yellow-500 text-sm poppins px-4 py-1 inline-block mb-4 m-2">Lunch</span>
                             <img class="rounded-t-lg"
-                                src="https://www.tooplate.com/templates/2129_crispy_kitchen/images/breakfast/brett-jordan-8xt8-HIFqc8-unsplash.jpg"
-                                alt="product image">
+                                src="./assets/imgs/dish.jpg"
+                                alt="food Image">
                         </div>
                         <div class="px-5 pb-5 pt-4">
                             <a href="#">
@@ -932,7 +938,7 @@
                             </div>
                             <div class="flex items-center justify-between">
                                 <span class="text-2xl font-bold text-gray-900">Rs.200</span>
-                                <button
+                                <button data-modal-target="food-modal" data-modal-toggle="food-modal"
                                     class="text-white bg-orange-400 hover:bg-orange-500 font-medium rounded-full text-sm px-5 py-2.5 text-center ">
                                     Order Now
                                 </button>
@@ -945,8 +951,8 @@
                             <span
                                 class="bg-yellow-100 border absolute left-0 border-yellow-500 rounded-full text-yellow-500 text-sm poppins px-4 py-1 inline-block mb-4 m-2">Lunch</span>
                             <img class="rounded-t-lg"
-                                src="https://www.tooplate.com/templates/2129_crispy_kitchen/images/breakfast/brett-jordan-8xt8-HIFqc8-unsplash.jpg"
-                                alt="product image">
+                                src="./assets/imgs/dish.jpg"
+                                alt="food Image">
                         </div>
                         <div class="px-5 pb-5 pt-4">
                             <a href="#">
@@ -990,7 +996,7 @@
                             </div>
                             <div class="flex items-center justify-between">
                                 <span class="text-2xl font-bold text-gray-900">Rs.200</span>
-                                <button
+                                <button data-modal-target="food-modal" data-modal-toggle="food-modal"
                                     class="text-white bg-orange-400 hover:bg-orange-500 font-medium rounded-full text-sm px-5 py-2.5 text-center ">
                                     Order Now
                                 </button>
@@ -1003,8 +1009,8 @@
                             <span
                                 class="bg-yellow-100 border absolute left-0 border-yellow-500 rounded-full text-yellow-500 text-sm poppins px-4 py-1 inline-block mb-4 m-2">Lunch</span>
                             <img class="rounded-t-lg"
-                                src="https://www.tooplate.com/templates/2129_crispy_kitchen/images/breakfast/brett-jordan-8xt8-HIFqc8-unsplash.jpg"
-                                alt="product image">
+                                src="./assets/imgs/dish.jpg"
+                                alt="food Image">
                         </div>
                         <div class="px-5 pb-5 pt-4">
                             <a href="#">
@@ -1048,7 +1054,7 @@
                             </div>
                             <div class="flex items-center justify-between">
                                 <span class="text-2xl font-bold text-gray-900">Rs.200</span>
-                                <button
+                                <button data-modal-target="food-modal" data-modal-toggle="food-modal"
                                     class="text-white bg-orange-400 hover:bg-orange-500 font-medium rounded-full text-sm px-5 py-2.5 text-center ">
                                     Order Now
                                 </button>
@@ -1061,8 +1067,8 @@
                             <span
                                 class="bg-yellow-100 border absolute left-0 border-yellow-500 rounded-full text-yellow-500 text-sm poppins px-4 py-1 inline-block mb-4 m-2">Lunch</span>
                             <img class="rounded-t-lg"
-                                src="https://www.tooplate.com/templates/2129_crispy_kitchen/images/breakfast/brett-jordan-8xt8-HIFqc8-unsplash.jpg"
-                                alt="product image">
+                                src="./assets/imgs/dish.jpg"
+                                alt="food Image">
                         </div>
                         <div class="px-5 pb-5 pt-4">
                             <a href="#">
@@ -1106,7 +1112,7 @@
                             </div>
                             <div class="flex items-center justify-between">
                                 <span class="text-2xl font-bold text-gray-900">Rs.200</span>
-                                <button
+                                <button data-modal-target="food-modal" data-modal-toggle="food-modal"
                                     class="text-white bg-orange-400 hover:bg-orange-500 font-medium rounded-full text-sm px-5 py-2.5 text-center ">
                                     Order Now
                                 </button>
@@ -1119,8 +1125,8 @@
                             <span
                                 class="bg-yellow-100 border absolute left-0 border-yellow-500 rounded-full text-yellow-500 text-sm poppins px-4 py-1 inline-block mb-4 m-2">Lunch</span>
                             <img class="rounded-t-lg"
-                                src="https://www.tooplate.com/templates/2129_crispy_kitchen/images/breakfast/brett-jordan-8xt8-HIFqc8-unsplash.jpg"
-                                alt="product image">
+                                src="./assets/imgs/dish.jpg"
+                                alt="food Image">
                         </div>
                         <div class="px-5 pb-5 pt-4">
                             <a href="#">
@@ -1164,7 +1170,7 @@
                             </div>
                             <div class="flex items-center justify-between">
                                 <span class="text-2xl font-bold text-gray-900">Rs.200</span>
-                                <button
+                                <button data-modal-target="food-modal" data-modal-toggle="food-modal"
                                     class="text-white bg-orange-400 hover:bg-orange-500 font-medium rounded-full text-sm px-5 py-2.5 text-center ">
                                     Order Now
                                 </button>
@@ -1182,8 +1188,8 @@
                             <span
                                 class="bg-yellow-100 border absolute left-0 border-yellow-500 rounded-full text-yellow-500 text-sm poppins px-4 py-1 inline-block mb-4 m-2">Dinner</span>
                             <img class="rounded-t-lg"
-                                src="https://www.tooplate.com/templates/2129_crispy_kitchen/images/breakfast/brett-jordan-8xt8-HIFqc8-unsplash.jpg"
-                                alt="product image">
+                                src="./assets/imgs/dish.jpg"
+                                alt="food Image">
                         </div>
                         <div class="px-5 pb-5 pt-4">
                             <a href="#">
@@ -1227,7 +1233,7 @@
                             </div>
                             <div class="flex items-center justify-between">
                                 <span class="text-2xl font-bold text-gray-900">Rs.200</span>
-                                <button
+                                <button data-modal-target="food-modal" data-modal-toggle="food-modal"
                                     class="text-white bg-orange-400 hover:bg-orange-500 font-medium rounded-full text-sm px-5 py-2.5 text-center ">
                                     Order Now
                                 </button>
@@ -1240,8 +1246,8 @@
                             <span
                                 class="bg-yellow-100 border absolute left-0 border-yellow-500 rounded-full text-yellow-500 text-sm poppins px-4 py-1 inline-block mb-4 m-2">Dinner</span>
                             <img class="rounded-t-lg"
-                                src="https://www.tooplate.com/templates/2129_crispy_kitchen/images/breakfast/brett-jordan-8xt8-HIFqc8-unsplash.jpg"
-                                alt="product image">
+                                src="./assets/imgs/dish.jpg"
+                                alt="food Image">
                         </div>
                         <div class="px-5 pb-5 pt-4">
                             <a href="#">
@@ -1285,7 +1291,7 @@
                             </div>
                             <div class="flex items-center justify-between">
                                 <span class="text-2xl font-bold text-gray-900">Rs.200</span>
-                                <button
+                                <button data-modal-target="food-modal" data-modal-toggle="food-modal"
                                     class="text-white bg-orange-400 hover:bg-orange-500 font-medium rounded-full text-sm px-5 py-2.5 text-center ">
                                     Order Now
                                 </button>
@@ -1298,8 +1304,8 @@
                             <span
                                 class="bg-yellow-100 border absolute left-0 border-yellow-500 rounded-full text-yellow-500 text-sm poppins px-4 py-1 inline-block mb-4 m-2">Dinner</span>
                             <img class="rounded-t-lg"
-                                src="https://www.tooplate.com/templates/2129_crispy_kitchen/images/breakfast/brett-jordan-8xt8-HIFqc8-unsplash.jpg"
-                                alt="product image">
+                                src="./assets/imgs/dish.jpg"
+                                alt="food Image">
                         </div>
                         <div class="px-5 pb-5 pt-4">
                             <a href="#">
@@ -1343,7 +1349,7 @@
                             </div>
                             <div class="flex items-center justify-between">
                                 <span class="text-2xl font-bold text-gray-900">Rs.200</span>
-                                <button
+                                <button data-modal-target="food-modal" data-modal-toggle="food-modal"
                                     class="text-white bg-orange-400 hover:bg-orange-500 font-medium rounded-full text-sm px-5 py-2.5 text-center ">
                                     Order Now
                                 </button>
@@ -1356,8 +1362,8 @@
                             <span
                                 class="bg-yellow-100 border absolute left-0 border-yellow-500 rounded-full text-yellow-500 text-sm poppins px-4 py-1 inline-block mb-4 m-2">Dinner</span>
                             <img class="rounded-t-lg"
-                                src="https://www.tooplate.com/templates/2129_crispy_kitchen/images/breakfast/brett-jordan-8xt8-HIFqc8-unsplash.jpg"
-                                alt="product image">
+                                src="./assets/imgs/dish.jpg"
+                                alt="food Image">
                         </div>
                         <div class="px-5 pb-5 pt-4">
                             <a href="#">
@@ -1401,66 +1407,7 @@
                             </div>
                             <div class="flex items-center justify-between">
                                 <span class="text-2xl font-bold text-gray-900">Rs.200</span>
-                                <button
-                                    class="text-white bg-orange-400 hover:bg-orange-500 font-medium rounded-full text-sm px-5 py-2.5 text-center ">
-                                    Order Now
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div
-                        class="bg-white border border-gray-100 rounded-lg max-w-sm transition transform duration-700 hover:shadow-xl hover:scale-105">
-                        <div class="relative">
-                            <span
-                                class="bg-yellow-100 border absolute left-0 border-yellow-500 rounded-full text-yellow-500 text-sm poppins px-4 py-1 inline-block mb-4 m-2">Dinner</span>
-                            <img class="rounded-t-lg"
-                                src="https://www.tooplate.com/templates/2129_crispy_kitchen/images/breakfast/brett-jordan-8xt8-HIFqc8-unsplash.jpg"
-                                alt="product image">
-                        </div>
-                        <div class="px-5 pb-5 pt-4">
-                            <a href="#">
-                                <h3 class="text-gray-900 font-semibold text-xl tracking-tight dark:text-white">
-                                    Morning Fresh
-                                </h3>
-                            </a>
-                            <div class="flex items-center mt-2.5 mb-5">
-                                <svg class="w-5 h-5 text-yellow-300" fill="currentColor" viewBox="0 0 20 20"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                                    </path>
-                                </svg>
-                                <svg class="w-5 h-5 text-yellow-300" fill="currentColor" viewBox="0 0 20 20"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                                    </path>
-                                </svg>
-                                <svg class="w-5 h-5 text-yellow-300" fill="currentColor" viewBox="0 0 20 20"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                                    </path>
-                                </svg>
-                                <svg class="w-5 h-5 text-yellow-300" fill="currentColor" viewBox="0 0 20 20"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                                    </path>
-                                </svg>
-                                <svg class="w-5 h-5 text-yellow-300" fill="currentColor" viewBox="0 0 20 20"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                                    </path>
-                                </svg>
-                                <span
-                                    class="bg-orange-100 text-orange-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded ml-3">5.0</span>
-                            </div>
-                            <div class="flex items-center justify-between">
-                                <span class="text-2xl font-bold text-gray-900">Rs.200</span>
-                                <button
+                                <button data-modal-target="food-modal" data-modal-toggle="food-modal"
                                     class="text-white bg-orange-400 hover:bg-orange-500 font-medium rounded-full text-sm px-5 py-2.5 text-center ">
                                     Order Now
                                 </button>
@@ -1474,8 +1421,8 @@
                             <span
                                 class="bg-yellow-100 border absolute left-0 border-yellow-500 rounded-full text-yellow-500 text-sm poppins px-4 py-1 inline-block mb-4 m-2">Dinner</span>
                             <img class="rounded-t-lg"
-                                src="https://www.tooplate.com/templates/2129_crispy_kitchen/images/breakfast/brett-jordan-8xt8-HIFqc8-unsplash.jpg"
-                                alt="product image">
+                                src="./assets/imgs/dish.jpg"
+                                alt="food Image">
                         </div>
                         <div class="px-5 pb-5 pt-4">
                             <a href="#">
@@ -1519,7 +1466,66 @@
                             </div>
                             <div class="flex items-center justify-between">
                                 <span class="text-2xl font-bold text-gray-900">Rs.200</span>
-                                <button
+                                <button data-modal-target="food-modal" data-modal-toggle="food-modal"
+                                    class="text-white bg-orange-400 hover:bg-orange-500 font-medium rounded-full text-sm px-5 py-2.5 text-center ">
+                                    Order Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="bg-white border border-gray-100 rounded-lg max-w-sm transition transform duration-700 hover:shadow-xl hover:scale-105">
+                        <div class="relative">
+                            <span
+                                class="bg-yellow-100 border absolute left-0 border-yellow-500 rounded-full text-yellow-500 text-sm poppins px-4 py-1 inline-block mb-4 m-2">Dinner</span>
+                            <img class="rounded-t-lg"
+                                src="./assets/imgs/dish.jpg"
+                                alt="food Image">
+                        </div>
+                        <div class="px-5 pb-5 pt-4">
+                            <a href="#">
+                                <h3 class="text-gray-900 font-semibold text-xl tracking-tight dark:text-white">
+                                    Morning Fresh
+                                </h3>
+                            </a>
+                            <div class="flex items-center mt-2.5 mb-5">
+                                <svg class="w-5 h-5 text-yellow-300" fill="currentColor" viewBox="0 0 20 20"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                    </path>
+                                </svg>
+                                <svg class="w-5 h-5 text-yellow-300" fill="currentColor" viewBox="0 0 20 20"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                    </path>
+                                </svg>
+                                <svg class="w-5 h-5 text-yellow-300" fill="currentColor" viewBox="0 0 20 20"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                    </path>
+                                </svg>
+                                <svg class="w-5 h-5 text-yellow-300" fill="currentColor" viewBox="0 0 20 20"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                    </path>
+                                </svg>
+                                <svg class="w-5 h-5 text-yellow-300" fill="currentColor" viewBox="0 0 20 20"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                    </path>
+                                </svg>
+                                <span
+                                    class="bg-orange-100 text-orange-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded ml-3">5.0</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-2xl font-bold text-gray-900">Rs.200</span>
+                                <button data-modal-target="food-modal" data-modal-toggle="food-modal"
                                     class="text-white bg-orange-400 hover:bg-orange-500 font-medium rounded-full text-sm px-5 py-2.5 text-center ">
                                     Order Now
                                 </button>
@@ -1531,9 +1537,9 @@
         </div>
         <!-- Menu Content Wrapper -->
     </section>
+    <!-- / Menu Section -->
 
     <!-- Reserve Table Section -->
-
     <section class="relative">
         <div class="BgImage"></div>
         <div class="overlay mx-auto py-10 flex justify-center items-center">
@@ -1672,7 +1678,8 @@
                                 <div class="order-2 md:order-1 lg:order-1 flex flex-col justify-center">
                                     <h1
                                         class="text-center md:text-left lg:text-left text-3xl lg:text-4xl font-semibold poppins pb-4 text-gray-700 select-none">
-                                        Eggs Benedict</h1>
+                                        Morning Fresh
+                                    </h1>
                                     <p
                                         class="text-center md:text-left lg:text-left text-sm poppins text-gray-500 leading-relaxed select-none">
                                         Gay one the what walk then she. Demesne mention promise you justice arrived
@@ -1721,7 +1728,7 @@
                                             </svg><span>Add to Cart</span></button>
                                     </div>
                                 </div>
-                                <div class="order-1 md:order-2 lg:order-2"><img src="./assets/Breakfast/breakfast1.png"
+                                <div class="order-1 md:order-2 lg:order-2"><img src="./assets/imgs/dish.jpg"
                                         class="w-3/4 md:w-3/4 lg:w-full mx-auto" alt="food"></div>
                             </div>
                         </div>
@@ -1771,7 +1778,9 @@
     </div>
     <!-- / Reserve Table Modal -->
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+    <!-- flowbite js -->
+    <script src="./assets/flowbite/dist/flowbite.js"></script>
+    <script src="./assets/flowbite/dist/flowbite.min.js"></script>
 </body>
 
 </html>

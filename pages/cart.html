@@ -5,60 +5,100 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resturant - Home </title>
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/imgs/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/imgs/favicon//favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/imgs/favicon//favicon-16x16.png">
+
     <link rel="stylesheet" href="../assets/style/output.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="../assets/style/index.css">
+    <link rel="stylesheet" href="../assets/flowbite/dist/flowbite.css">
+    <link rel="stylesheet" href="../assets/flowbite/dist/flowbite.min.css">
+    <link rel="stylesheet" href="../assets/style/index.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
 </head>
 
-<body class="relative">
+<body>
 
     <!-- header Section -->
-    <header class="sticky w-full top-0 bg-white z-20 py-4 px-4 mx-auto  border-b shadow-sm border-gray-100">
-        <div class="container-max flex justify-between items-center w-full">
-            <div class="flex items-center gap-2 md:gap-4"><a data-testid="logo"
-                    class="text-xl md:text-2xl font-semibold flex items-center" href="/">🍔 <span
-                        class="hidden md:block logo">FoodHunt</span></a><button
-                    class="text-xs md:text-sm flex items-center gap-1"><svg xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="w-4 h-4 text-gray-700">
-                        <path fill-rule="evenodd"
-                            d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z"
-                            clip-rule="evenodd"></path>
-                    </svg>Delhi<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                        aria-hidden="true" class="w-4 h-4 text-orange-500">
-                        <path fill-rule="evenodd"
-                            d="M12.53 16.28a.75.75 0 01-1.06 0l-7.5-7.5a.75.75 0 011.06-1.06L12 14.69l6.97-6.97a.75.75 0 111.06 1.06l-7.5 7.5z"
-                            clip-rule="evenodd"></path>
-                    </svg></button></div>
-            <ul class="text-zinc-700 ml-auto gap-2 md:gap-4 items-center hidden md:flex">
+    <header class="sticky top-0 z-10">
+        <nav class="bg-white border-gray-200 px-4 lg:px-6 py-2.5">
+            <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
 
-                <li><a class="p-2 relative md:px-4 hover:bg-gray-50 rounded-md flex items-center gap-2"
-                        href="/cart"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                <!-- logo wrapper -->
+                <a href="/" class="flex items-center">
+                    <span class="text-md md:text-3xl mb-1">🍔</span>
+                    <span class="self-center text-md md:text-xl font-semibold whitespace-nowrap">FoodHunt</span>
+                </a>
+                <!-- / logo wrapper -->
+
+                <!-- menu items -->
+                <div class="flex items-center lg:order-2 gap-5">
+                    <a class="p-2 relative md:px-4 hover:bg-gray-50 rounded-md flex items-center gap-2"
+                        href="./pages/cart.html"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
                             aria-hidden="true" class="w-4 h-4 text-gray-700">
                             <path fill-rule="evenodd"
                                 d="M7.5 6v.75H5.513c-.96 0-1.764.724-1.865 1.679l-1.263 12A1.875 1.875 0 004.25 22.5h15.5a1.875 1.875 0 001.865-2.071l-1.263-12a1.875 1.875 0 00-1.865-1.679H16.5V6a4.5 4.5 0 10-9 0zM12 3a3 3 0 00-3 3v.75h6V6a3 3 0 00-3-3zm-3 8.25a3 3 0 106 0v-.75a.75.75 0 011.5 0v.75a4.5 4.5 0 11-9 0v-.75a.75.75 0 011.5 0v.75z"
                                 clip-rule="evenodd"></path>
                         </svg>
-                        <p class="hidden md:block">Cart</p>
+                        <p>Cart</p>
                         <p
                             class="absolute -top-1 -right-1 bg-orange-500 text-white flex justify-center items-center w-5 h-5 text-xs rounded-full">
                             0</p>
-                    </a></li>
-            </ul><button
-                class="ml-4 bg-orange-400 text-white p-2 px-4 rounded-md items-center gap-2 hidden md:flex">Login</button>
+                    </a>
+                    <a href="./pages/login"
+                        class="text-white bg-primary-700 hidden md:block hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 bg-orange-600">
+                        Login
+                    </a>
 
-            <button class="block md:hidden"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                    fill="currentColor" aria-hidden="true" class="w-6 h-6">
-                    <path fill-rule="evenodd"
-                        d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
-                        clip-rule="evenodd"></path>
-                </svg></button>
-        </div>
+                    <button data-collapse-toggle="mobile-menu-2" type="button"
+                        class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                        aria-controls="mobile-menu-2" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                        <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                </div>
+                <!-- / menu items -->
+
+                <!-- hamburger content  -->
+                <div class="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1" id="mobile-menu-2">
+                    <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
+                        <li class="relative">
+                            <a href="#" class="block py-2 pr-4 border-orange-600 border-b-2 pl-3 lg:text-gray-900 lg:p-0 "
+                                aria-current="page">Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-gray-900 lg:p-0">Menu</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-gray-900 lg:p-0 ">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- / hamburger content  -->
+            </div>
+        </nav>
     </header>
     <!-- / header Section -->
 
-    <!--  -->
-
-    <!-- main cart section -->
+    <!-- cart section ui -->
     <main class="my-5">
         <div class="max-w-screen-xl mx-auto px-6">
             <div class="relative top-8">
@@ -74,48 +114,117 @@
                 </a>
                 </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10">
-                <div class="col-span-1">
-                    <div class="flex flex-col mt-20">
-                        <h1 class="text-2xl poppins pb-4 border-b border-gray-500 text-gray-700">Edit Delivery Details
-                        </h1>
-                        <form class="my-4">
-                            <div class="flex flex-col space-y-3"><input type="text" placeholder="Country and District"
-                                    name="country" required=""
-                                    class="w-full px-4 py-3 rounded-lg ring-red-200 focus:ring-4 focus:outline-none glass transition duration-300 border border-gray-300 focus:shadow-xl"
-                                    value=""><input type="text" placeholder="Road Name and Road No" name="roadNo"
-                                    required=""
-                                    class="w-full px-4 py-3 rounded-lg ring-red-200 focus:ring-4 focus:outline-none glass transition duration-300 border border-gray-300 focus:shadow-xl"
-                                    value=""><input type="text" placeholder="Flat, suite or floor" name="flatno"
-                                    required=""
-                                    class="w-full px-4 py-3 rounded-lg ring-red-200 focus:ring-4 focus:outline-none glass transition duration-300 border border-gray-300 focus:shadow-xl"
-                                    value=""><input type="text" placeholder="Delivery to" name="name" required=""
-                                    class="w-full px-4 py-3 rounded-lg ring-red-200 focus:ring-4 focus:outline-none glass transition duration-300 border border-gray-300 focus:shadow-xl"
-                                    value="user "><button
-                                    class="w-full px-6 py-3 rounded-lg bg-orange-500 text-white poppins ring-red-300 focus:ring-4 transition duration-500">Save
-                                    &amp; Continue</button></div>
-                        </form>
+                <div class="col-span-1 py-10">
+                    
+                    <div class="py-5">
+                        <ul class="flex flex-wrap -mb-px text-sm font-medium text-center" id="default-tab" data-tabs-toggle="#default-tab-content" role="tablist">
+                            <li class="me-2" role="presentation">
+                                <button class="w-full flex justify-center font-medium px-5 py-2 border-t border-b bg-gray-900 text-white  border-gray-900 hover:bg-gray-800" id="profile-tab" data-tabs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">
+                                    Delivery Food
+                                </button>
+                            </li>
+                            <li class="me-2" role="presentation">
+                                <button class="w-full flex justify-center font-medium rounded-l px-5 py-2 border bg-white text-gray-800 border-gray-200 hover:bg-gray-100" id="dashboard-tab" data-tabs-target="#dashboard" type="button" role="tab" aria-controls="dashboard" aria-selected="false">
+                                    Reserve Table
+                                </button>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="flex flex-col space-y-4 mb-3">
-                        <p class="poppins text-gray-700">Deliver Place : <span
-                                class="font-semibold text-black">-----</span></p>
-                        <p class="poppins text-gsray-700">Ariving in 20-30 min</p>
-                        <p class="poppins text-gray-700">Road <span class="font-semibold text-black">-----</span>
-                        </p>
-                        <p class="poppins text-gray-700">Floor : <span class="font-semibold text-black">-----</span>
-                        </p>
-                        <p class="poppins text-gray-700">Deliver to : <span
-                                class="font-semibold text-black">-----</span> </p>
+
+                    <div id="default-tab-content">
+                        <div class="hidden" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                            <div class="flex flex-col">
+                                <h1 class="text-2xl poppins pb-4 border-b border-gray-500 text-gray-700">Enter Delivery Details
+                                </h1>
+                                <form class="my-4">
+                                    <div class="flex flex-col space-y-3"><input type="text" placeholder="Country and District"
+                                            name="country" required=""
+                                            class="w-full px-4 py-3 rounded-lg ring-red-200 focus:ring-4 focus:outline-none glass transition duration-300 border border-gray-300 focus:shadow-xl"
+                                            value=""><input type="text" placeholder="Road Name and Road No" name="roadNo"
+                                            required=""
+                                            class="w-full px-4 py-3 rounded-lg ring-red-200 focus:ring-4 focus:outline-none glass transition duration-300 border border-gray-300 focus:shadow-xl"
+                                            value=""><input type="text" placeholder="Flat, suite or floor" name="flatno"
+                                            required=""
+                                            class="w-full px-4 py-3 rounded-lg ring-red-200 focus:ring-4 focus:outline-none glass transition duration-300 border border-gray-300 focus:shadow-xl"
+                                            value=""><input type="text" placeholder="Delivery to" name="name" required=""
+                                            class="w-full px-4 py-3 rounded-lg ring-red-200 focus:ring-4 focus:outline-none glass transition duration-300 border border-gray-300 focus:shadow-xl"
+                                            ><button
+                                            class="w-full px-6 py-3 rounded-lg bg-orange-500 text-white poppins ring-red-300 focus:ring-4 transition duration-500">Save
+                                            &amp; Continue</button></div>
+                                </form>
+                            </div>
+                            <div class="flex flex-col space-y-4 mb-3">
+                                <p class="poppins text-gray-700">Deliver Place : <span
+                                        class="font-semibold text-black">-----</span></p>
+                                <p class="poppins text-gsray-700">Ariving in 20-30 min</p>
+                                <p class="poppins text-gray-700">Road <span class="font-semibold text-black">-----</span>
+                                </p>
+                                <p class="poppins text-gray-700">Floor : <span class="font-semibold text-black">-----</span>
+                                </p>
+                                <p class="poppins text-gray-700">Deliver to : <span
+                                        class="font-semibold text-black">-----</span> </p>
+                            </div>
+                        </div>
+                        <div class="hidden" id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
+                            <div class="flex flex-col">
+                                <h1 class="text-2xl poppins pb-4 border-b border-gray-500 text-gray-700">Reserve Your Table</h1>
+                                <form class="my-4">
+                                    <div class="grid grid-cols-2 gap-4">
+                                        <input type="text" placeholder="Full Name" name="fullname" required=""
+                                            class="w-full px-4 py-3 rounded-lg ring-red-200 focus:ring-4 focus:outline-none glass transition duration-300 border border-gray-300 focus:shadow-xl"
+                                            value="">
+                                        <input type="email" placeholder="Email ID" name="email" required=""
+                                            class="w-full px-4 py-3 rounded-lg ring-red-200 focus:ring-4 focus:outline-none glass transition duration-300 border border-gray-300 focus:shadow-xl"
+                                            value="">
+                                        <input type="tel" placeholder="Phone Number" name="phone" required=""
+                                            class="w-full px-4 py-3 rounded-lg ring-red-200 focus:ring-4 focus:outline-none glass transition duration-300 border border-gray-300 focus:shadow-xl"
+                                            value="">
+                                        <input type="number" placeholder="Number of Persons" name="persons" required=""
+                                            class="w-full px-4 py-3 rounded-lg ring-red-200 focus:ring-4 focus:outline-none glass transition duration-300 border border-gray-300 focus:shadow-xl"
+                                            value="">
+                                        <input type="date" placeholder="Date" name="date" required=""
+                                            class="w-full px-4 py-3 rounded-lg ring-red-200 focus:ring-4 focus:outline-none glass transition duration-300 border border-gray-300 focus:shadow-xl"
+                                            value="">
+                                        <input type="text" placeholder="Table Number" name="table" required=""
+                                            class="w-full px-4 py-3 rounded-lg ring-red-200 focus:ring-4 focus:outline-none glass transition duration-300 border border-gray-300 focus:shadow-xl"
+                                            value="">
+                                        </div>
+                                        <div class="mt-4">
+                                           <textarea id="special-request" name="request" required="" placeholder="Special Request"
+                                            class="w-full px-4 py-3 mt-2 rounded-lg ring-red-200 focus:ring-4 focus:outline-none glass transition duration-300 border border-gray-300 focus:shadow-xl"></textarea>
+                                        </div>
+
+                                        <button class="w-full px-6 py-3 rounded-lg bg-orange-500 text-white poppins ring-red-300 focus:ring-4 transition duration-500">
+                                            Save & Continue
+                                        </button>
+                                </form>
+                            </div>
+
+                            <div class="flex flex-col space-y-4 mb-3">
+                                <p class="poppins text-gsray-700">Your Full Name: <span class="font-semibold text-black">-----</span></p>
+                                <p class="poppins text-gray-700">Email Address: <span class="font-semibold text-black">-----</span></p>
+                                <p class="poppins text-gray-700">Phone Number: <span class="font-semibold text-black">-----</span></p>
+                                <p class="poppins text-gray-700">Number of Persons: <span class="font-semibold text-black">-----</span></p>
+                                <p class="poppins text-gray-700">Date: <span class="font-semibold text-black">-----</span></p>
+                                <p class="poppins text-gray-700">Table Number: <span class="font-semibold text-black">-----</span></p>
+                                <p class="poppins text-gray-700">Special Request: <span class="font-semibold text-black">-----</span></p>
+                            </div>                            
+                            
+                        </div>
                     </div>
+
+                    
                 </div>
                 <div class="col-span-1">
                     <div class="glass p-6 box-border rounded-lg">
 
                         <div class=" flex flex-col space-y-3 h-64 overflow-y-scroll orderContainer ">
+                            
                             <div class=" rounded-lg p-4 flex space-x-3">
                                 <div class="flex"><img class="w-24 object-contain"
-                                        src="../assets/Breakfast/breakfast1.png" alt=""></div>
+                                        src="../assets/imgs/dish.jpg" alt="food item"></div>
                                 <div class="flex flex-col space-y-3 flex-grow">
-                                    <h5 class="text-base poppins text-gray-700">Eggs Benedict</h5>
+                                    <h5 class="text-base poppins text-gray-700">Morning Fresh</h5>
                                     <h1 class="font-semibold text-lg text-primary poppins">Rs.200</h1>
                                     <p class="text-sm poppins text-gray-400">Breakfast</p>
                                 </div>
@@ -136,9 +245,9 @@
                                     class="flex-grow poppins text-gray-700">Subtotal</span><span
                                     class="poppins font-semibold text-black">Rs.200</span></div>
                             <div class="flex items-center"><span class="flex-grow poppins text-gray-700">Tax</span><span
-                                    class="poppins font-semibold text-black">Rs.20</span></div>
+                                    class="poppins font-semibold text-black">Rs.50</span></div>
                             <div class="flex items-center"><span class="flex-grow poppins text-gray-700">Delivery
-                                    Fee</span><span class="poppins font-semibold text-black">Rs.200</span></div>
+                                    Fee</span><span class="poppins font-semibold text-black">Rs.50</span></div>
                             <div class="flex items-center"><span
                                     class="flex-grow poppins text-gray-700 text-xl">Total</span><span
                                     class="poppins font-semibold text-black text-xl">Rs.300</span></div>
@@ -151,19 +260,19 @@
             </div>
         </div>
     </main>
-
-    <!-- / main cart section -->
+    <!-- / cart section ui -->
 
     <!-- footer section -->
     <footer class="site-footer section-padding">
         <div class="px-6 mx-auto">
             <div class="flex items-center justify-between">
-                <a data-testid="logo"
-                        class="text-xl md:text-4xl font-semibold flex items-center " href="/">🍔 <span
-                class="hidden md:block logo text-white font-bold text-2xl">FoodHunt</span></a>
-                
+                <a data-testid="logo" class="text-xl md:text-4xl font-semibold flex items-center " href="/">🍔 <span
+                        class="hidden md:block logo text-white font-bold text-2xl">FoodHunt</span></a>
+
                 <div class="flex -mx-2">
-                    <a href="#" class="mx-2  transition-colors duration-300 text-white hover:text-blue-500 dark:hover:text-blue-400" aria-label="Reddit">
+                    <a href="#"
+                        class="mx-2  transition-colors duration-300 text-white hover:text-blue-500 dark:hover:text-blue-400"
+                        aria-label="Reddit">
                         <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -172,7 +281,9 @@
                         </svg>
                     </a>
 
-                    <a href="#" class="mx-2  transition-colors duration-300 text-white hover:text-blue-500 dark:hover:text-blue-400" aria-label="Facebook">
+                    <a href="#"
+                        class="mx-2  transition-colors duration-300 text-white hover:text-blue-500 dark:hover:text-blue-400"
+                        aria-label="Facebook">
                         <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -181,7 +292,9 @@
                         </svg>
                     </a>
 
-                    <a href="#" class="mx-2  transition-colors duration-300 text-white hover:text-blue-500 dark:hover:text-blue-400" aria-label="Github">
+                    <a href="#"
+                        class="mx-2  transition-colors duration-300 text-white hover:text-blue-500 dark:hover:text-blue-400"
+                        aria-label="Github">
                         <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -192,7 +305,7 @@
                 </div>
             </div>
 
-            <hr class="my-6 border-gray-200 md:my-8 dark:border-gray-700">
+            <hr class="my-6 border-gray-200 md:my-8 ">
 
             <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-y-10 lg:grid-cols-4">
                 <div class="sm:col-span-2">
@@ -204,9 +317,15 @@
                     <p class="font-semibold  text-white">Opening Hours</p>
 
                     <div class="flex flex-col items-start mt-5 space-y-2">
-                        <a href="#" class="transition-colors duration-300 text-white dark:hover:text-blue-400 hover:underline hover:text-blue-500">Monday - Friday</a>
-                        <a href="#" class=" transition-colors duration-300 text-white dark:hover:text-blue-400 hover:underline hover:text-blue-500">10:00 AM - 08:00 PM</a>
-                        <a href="#" class=" transition-colors duration-300 text-white dark:hover:text-blue-400 hover:underline hover:text-blue-500">Tel: 010-02-0340</a>
+                        <a href="#"
+                            class="transition-colors duration-300 text-white dark:hover:text-blue-400 hover:underline hover:text-blue-500">Monday
+                            - Friday</a>
+                        <a href="#"
+                            class=" transition-colors duration-300 text-white dark:hover:text-blue-400 hover:underline hover:text-blue-500">10:00
+                            AM - 08:00 PM</a>
+                        <a href="#"
+                            class=" transition-colors duration-300 text-white dark:hover:text-blue-400 hover:underline hover:text-blue-500">Tel:
+                            010-02-0340</a>
                     </div>
                 </div>
 
@@ -214,9 +333,15 @@
                     <p class="font-semibold text-white">Industries</p>
 
                     <div class="flex flex-col items-start mt-5 space-y-2">
-                        <a href="#" class=" transition-colors duration-300 text-white dark:hover:text-blue-400 hover:underline hover:text-blue-500">Retail & E-Commerce</a>
-                        <a href="#" class=" transition-colors duration-300 text-white dark:hover:text-blue-400 hover:underline hover:text-blue-500">Information Technology</a>
-                        <a href="#" class=" transition-colors duration-300 text-white dark:hover:text-blue-400 hover:underline hover:text-blue-500">Finance & Insurance</a>
+                        <a href="#"
+                            class=" transition-colors duration-300 text-white dark:hover:text-blue-400 hover:underline hover:text-blue-500">Retail
+                            & E-Commerce</a>
+                        <a href="#"
+                            class=" transition-colors duration-300 text-white dark:hover:text-blue-400 hover:underline hover:text-blue-500">Information
+                            Technology</a>
+                        <a href="#"
+                            class=" transition-colors duration-300 text-white dark:hover:text-blue-400 hover:underline hover:text-blue-500">Finance
+                            & Insurance</a>
                     </div>
                 </div>
             </div>
@@ -225,7 +350,139 @@
     <!-- footer section -->
 
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+    <!-- add to cart Modal Wrapper -->
+    <div id="food-modal" data-modal-backdrop="static" tabindex="-1" aria-hidden="true"
+        class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+        <div class="relative p-4 w-full max-w-screen-md max-h-full">
+            <!-- Modal content -->
+            <div class="relative bg-white rounded-lg shadow ">
+                <!-- Modal header -->
+                <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+                        View Dish
+                    </h3>
+                    <button type="button"
+                        class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                        data-modal-hide="food-modal">
+                        <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 14 14">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                        </svg>
+                        <span class="sr-only">Close modal</span>
+                    </button>
+                </div>
+                <!-- Modal body -->
+                <div class="p-4 md:p-5 space-y-4">
+                    <main class="mx-auto px-6">
+                        <div class="flex flex-col justify-center items-center">
+                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10">
+                                <div class="order-2 md:order-1 lg:order-1 flex flex-col justify-center">
+                                    <h1
+                                        class="text-center md:text-left lg:text-left text-3xl lg:text-4xl font-semibold poppins pb-4 text-gray-700 select-none">
+                                        Morning Fresh
+                                    </h1>
+                                    <p
+                                        class="text-center md:text-left lg:text-left text-sm poppins text-gray-500 leading-relaxed select-none">
+                                        Gay one the what walk then she. Demesne mention promise you justice arrived
+                                        way.Amazing foods
+                                        are or and increasing to in especially inquietude companions acceptance
+                                        admiration.Outweigh it
+                                        families distance wandered ye..</p>
+                                    <div
+                                        class="flex items-center justify-center md:justify-start lg:justify-start space-x-6 pt-8">
+                                        <h1 class="text-3xl font-bold text-black poppins select-none">Rs. 280
+                                        </h1>
+                                        <div
+                                            class="flex items-center border border-gray-200 px-4 py-2 space-x-6 rounded-full">
+                                            <svg stroke="currentColor" fill="currentColor" stroke-width="0"
+                                                viewBox="0 0 1024 1024"
+                                                class="text-2xl bg-orange-400 w-8 h-8 rounded-full text-white hover:scale-105 transform transition duration-500 cursor-pointer p-1"
+                                                height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M872 474H152c-4.4 0-8 3.6-8 8v60c0 4.4 3.6 8 8 8h720c4.4 0 8-3.6 8-8v-60c0-4.4-3.6-8-8-8z">
+                                                </path>
+                                            </svg><span class="text-lg text-gray-700 poppins select-none">1</span><svg
+                                                stroke="currentColor" fill="currentColor" stroke-width="0"
+                                                t="1551322312294" viewBox="0 0 1024 1024" version="1.1"
+                                                class="text-2xl bg-orange-400 w-8 h-8 rounded-full text-white hover:scale-105 transform transition duration-500 cursor-pointer p-1"
+                                                height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                                <defs></defs>
+                                                <path
+                                                    d="M474 152m8 0l60 0q8 0 8 8l0 704q0 8-8 8l-60 0q-8 0-8-8l0-704q0-8 8-8Z">
+                                                </path>
+                                                <path
+                                                    d="M168 474m8 0l672 0q8 0 8 8l0 60q0 8-8 8l-672 0q-8 0-8-8l0-60q0-8 8-8Z">
+                                                </path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="mt-8 flex items-center justify-center md:justify-start lg:justify-start">
+                                        <button
+                                            class="flex items-center space-x-3 bg-orange-400 px-6 py-3 text-white poppins rounded-full ring-red-300 focus:outline-none focus:ring-4 transform transition duration-700 hover:scale-105"><svg
+                                                stroke="currentColor" fill="currentColor" stroke-width="0"
+                                                viewBox="0 0 16 16" class="text-xl" height="1em" width="1em"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z">
+                                                </path>
+                                            </svg><span>Add to Cart</span></button>
+                                    </div>
+                                </div>
+                                <div class="order-1 md:order-2 lg:order-2"><img src="https://www.tooplate.com/templates/2129_crispy_kitchen/images/breakfast/brett-jordan-8xt8-HIFqc8-unsplash.jpg"
+                                        class="w-3/4 md:w-3/4 lg:w-full mx-auto" alt="food"></div>
+                            </div>
+                        </div>
+                    </main>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- / add to cart Modal Wrapper -->
+
+    <!-- Reserve Table Modal -->
+    <div id="Reserve-Table-Modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+        <div class="relative w-full max-w-screen-md max-h-full">
+            <div class="relative bg-white rounded-lg">
+                <button type="button" class="text-gray-900 bg-transparent right-5 top-5 absolute hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="Reserve-Table-Modal">
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                    </svg>
+                    <span class="sr-only">Close modal</span>
+                </button>
+                <!-- Modal body -->
+                <div class="p-3">
+                    <div>
+                        <div class="mt-3 text-center text-4xl font-bold">Reserve a Table</div>
+                        <div class="p-8">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                                <input type="text" name="full_name" class="mt-1 block w-full md:w-1/2 rounded-md border border-slate-300 bg-white px-3 py-4 placeholder-slate-400 shadow-sm placeholder:font-semibold placeholder:text-gray-500 focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500 sm:text-sm" placeholder="Full Name *" />
+                                <input type="email" name="email" class="mt-1 block w-full md:w-1/2 rounded-md border border-slate-300 bg-white px-3 py-4 placeholder-slate-400 shadow-sm placeholder:font-semibold placeholder:text-gray-500 focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500 sm:text-sm" placeholder="Email Address *" />
+                                <input type="tel" name="phone" class="mt-1 block w-full md:w-1/2 rounded-md border border-slate-300 bg-white px-3 py-4 placeholder-slate-400 shadow-sm placeholder:font-semibold placeholder:text-gray-500 focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500 sm:text-sm" placeholder="Phone Number *" />
+                                <input type="number" name="num_persons" class="mt-1 block w-full md:w-1/2 rounded-md border border-slate-300 bg-white px-3 py-4 placeholder-slate-400 shadow-sm placeholder:font-semibold placeholder:text-gray-500 focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500 sm:text-sm" placeholder="Number of Persons *" />
+                                <input type="date" name="date" class="mt-1 block w-full md:w-1/2 rounded-md border border-slate-300 bg-white px-3 py-4 placeholder-slate-400 shadow-sm placeholder:font-semibold placeholder:text-gray-500 focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500 sm:text-sm" placeholder="Date *" />
+                                <input type="text" name="table_number" class="mt-1 block w-full md:w-1/2 rounded-md border border-slate-300 bg-white px-3 py-4 placeholder-slate-400 shadow-sm placeholder:font-semibold placeholder:text-gray-500 focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500 sm:text-sm" placeholder="Table Number *" />
+                            </div>
+                            <textarea name="special_request" id="special_request" cols="30" rows="5" class="mt-1 block w-full rounded-md border border-slate-300 bg-white px-3 py-4 placeholder-slate-400 shadow-sm placeholder:font-semibold placeholder:text-gray-500 focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500 sm:text-sm" placeholder="Special Request"></textarea>
+                            <div class="text-center mt-6">
+                                <button type="submit" class="cursor-pointer rounded-lg bg-orange-500 px-8 py-5 text-md font-semibold text-white">
+                                    Reserve
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <!-- / Reserve Table Modal -->
+
+    <!-- flowbite js -->
+    <script src="../assets/flowbite/dist/flowbite.js"></script>
+    <script src="../assets/flowbite/dist/flowbite.min.js"></script>
 </body>
 
 </html>
