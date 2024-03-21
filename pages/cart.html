@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resturant - Home </title>
+    <title>Resturant - Cart </title>
     <link rel="apple-touch-icon" sizes="180x180" href="../assets/imgs/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="32x32" href="../assets/imgs/favicon//favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/imgs/favicon//favicon-16x16.png">
@@ -20,6 +20,84 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
         rel="stylesheet">
+    <style>
+        .form-radio {
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    appearance: none;
+                    -webkit-print-color-adjust: exact;
+                    color-adjust: exact;
+                    display: inline-block;
+                    vertical-align: middle;
+                    background-origin: border-box;
+                    -webkit-user-select: none;
+                    -moz-user-select: none;
+                    -ms-user-select: none;
+                    user-select: none;
+                    flex-shrink: 0;
+                    border-radius: 100%;
+                    border-width: 2px;
+                }
+
+                .form-radio:checked {
+                    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='8' cy='8' r='3'/%3e%3c/svg%3e");
+                    border-color: transparent;
+                    background-color: currentColor;
+                    background-size: 100% 100%;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                }
+
+                @media not print {
+                    .form-radio::-ms-check {
+                        border-width: 1px;
+                        color: transparent;
+                        background: inherit;
+                        border-color: inherit;
+                        border-radius: inherit;
+                    }
+                }
+
+                .form-radio:focus {
+                    outline: none;
+                }
+
+                .form-select {
+                    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23a0aec0'%3e%3cpath d='M15.3 9.3a1 1 0 0 1 1.4 1.4l-4 4a1 1 0 0 1-1.4 0l-4-4a1 1 0 0 1 1.4-1.4l3.3 3.29 3.3-3.3z'/%3e%3c/svg%3e");
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    appearance: none;
+                    -webkit-print-color-adjust: exact;
+                    color-adjust: exact;
+                    background-repeat: no-repeat;
+                    padding-top: 0.5rem;
+                    padding-right: 2.5rem;
+                    padding-bottom: 0.5rem;
+                    padding-left: 0.75rem;
+                    font-size: 1rem;
+                    line-height: 1.5;
+                    background-position: right 0.5rem center;
+                    background-size: 1.5em 1.5em;
+                }
+
+                .form-select::-ms-expand {
+                    color: #a0aec0;
+                    border: none;
+                }
+
+                @media not print {
+                    .form-select::-ms-expand {
+                        display: none;
+                    }
+                }
+
+                @media print and (-ms-high-contrast: active),
+                print and (-ms-high-contrast: none) {
+                    .form-select {
+                        padding-right: 0.75rem;
+                    }
+                }
+    </style>
 </head>
 
 <body>
@@ -39,8 +117,8 @@
                 <!-- menu items -->
                 <div class="flex items-center lg:order-2 gap-5">
                     <a class="p-2 relative md:px-4 hover:bg-gray-50 rounded-md flex items-center gap-2"
-                        href="./pages/cart.html"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                            aria-hidden="true" class="w-4 h-4 text-gray-700">
+                        href="./pages/cart.html"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                            fill="currentColor" aria-hidden="true" class="w-4 h-4 text-gray-700">
                             <path fill-rule="evenodd"
                                 d="M7.5 6v.75H5.513c-.96 0-1.764.724-1.865 1.679l-1.263 12A1.875 1.875 0 004.25 22.5h15.5a1.875 1.875 0 001.865-2.071l-1.263-12a1.875 1.875 0 00-1.865-1.679H16.5V6a4.5 4.5 0 10-9 0zM12 3a3 3 0 00-3 3v.75h6V6a3 3 0 00-3-3zm-3 8.25a3 3 0 106 0v-.75a.75.75 0 011.5 0v.75a4.5 4.5 0 11-9 0v-.75a.75.75 0 011.5 0v.75z"
                                 clip-rule="evenodd"></path>
@@ -78,7 +156,8 @@
                 <div class="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1" id="mobile-menu-2">
                     <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
                         <li class="relative">
-                            <a href="#" class="block py-2 pr-4 border-orange-600 border-b-2 pl-3 lg:text-gray-900 lg:p-0 "
+                            <a href="#"
+                                class="block py-2 pr-4 border-orange-600 border-b-2 pl-3 lg:text-gray-900 lg:p-0 "
                                 aria-current="page">Home
                             </a>
                         </li>
@@ -102,29 +181,35 @@
     <main class="my-5">
         <div class="max-w-screen-xl mx-auto px-6">
             <div class="relative top-8">
-                <a
-                    class="hover:underline poppins text-gray-700 select-none flex items-center space-x-2" href=".././index.html">
-                    <svg
-                        stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em"
+                <a class="hover:underline poppins text-gray-700 select-none flex items-center space-x-2"
+                    href=".././index.html">
+                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em"
                         width="1em" xmlns="http://www.w3.org/2000/svg">
                         <path fill="none" d="M0 0h24v24H0V0z"></path>
                         <path d="M21 11H6.83l3.58-3.59L9 6l-6 6 6 6 1.41-1.41L6.83 13H21v-2z"></path>
-                    </svg> 
+                    </svg>
                     <span>Back</span>
                 </a>
-                </div>
+            </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10">
                 <div class="col-span-1 py-10">
-                    
+
                     <div class="py-5">
-                        <ul class="flex flex-wrap -mb-px text-sm font-medium text-center" id="default-tab" data-tabs-toggle="#default-tab-content" role="tablist">
+                        <ul class="flex flex-wrap -mb-px text-sm font-medium text-center" id="default-tab"
+                            data-tabs-toggle="#default-tab-content" role="tablist">
                             <li class="me-2" role="presentation">
-                                <button class="w-full flex justify-center font-medium px-5 py-2 border-t border-b bg-gray-900 text-white  border-gray-900 hover:bg-gray-800" id="profile-tab" data-tabs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">
+                                <button
+                                    class="w-full flex justify-center font-medium px-5 py-2 border-t border-b bg-gray-900 text-white  border-gray-900 hover:bg-gray-800"
+                                    id="profile-tab" data-tabs-target="#profile" type="button" role="tab"
+                                    aria-controls="profile" aria-selected="false">
                                     Delivery Food
                                 </button>
                             </li>
                             <li class="me-2" role="presentation">
-                                <button class="w-full flex justify-center font-medium rounded-l px-5 py-2 border bg-white text-gray-800 border-gray-200 hover:bg-gray-100" id="dashboard-tab" data-tabs-target="#dashboard" type="button" role="tab" aria-controls="dashboard" aria-selected="false">
+                                <button
+                                    class="w-full flex justify-center font-medium rounded-l px-5 py-2 border bg-white text-gray-800 border-gray-200 hover:bg-gray-100"
+                                    id="dashboard-tab" data-tabs-target="#dashboard" type="button" role="tab"
+                                    aria-controls="dashboard" aria-selected="false">
                                     Reserve Table
                                 </button>
                             </li>
@@ -134,21 +219,22 @@
                     <div id="default-tab-content">
                         <div class="hidden" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                             <div class="flex flex-col">
-                                <h1 class="text-2xl poppins pb-4 border-b border-gray-500 text-gray-700">Enter Delivery Details
+                                <h1 class="text-2xl poppins pb-4 border-b border-gray-500 text-gray-700">Enter Delivery
+                                    Details
                                 </h1>
                                 <form class="my-4">
-                                    <div class="flex flex-col space-y-3"><input type="text" placeholder="Country and District"
-                                            name="country" required=""
+                                    <div class="flex flex-col space-y-3"><input type="text"
+                                            placeholder="Country and District" name="country" required=""
                                             class="w-full px-4 py-3 rounded-lg ring-red-200 focus:ring-4 focus:outline-none glass transition duration-300 border border-gray-300 focus:shadow-xl"
-                                            value=""><input type="text" placeholder="Road Name and Road No" name="roadNo"
-                                            required=""
+                                            value=""><input type="text" placeholder="Road Name and Road No"
+                                            name="roadNo" required=""
                                             class="w-full px-4 py-3 rounded-lg ring-red-200 focus:ring-4 focus:outline-none glass transition duration-300 border border-gray-300 focus:shadow-xl"
                                             value=""><input type="text" placeholder="Flat, suite or floor" name="flatno"
                                             required=""
                                             class="w-full px-4 py-3 rounded-lg ring-red-200 focus:ring-4 focus:outline-none glass transition duration-300 border border-gray-300 focus:shadow-xl"
-                                            value=""><input type="text" placeholder="Delivery to" name="name" required=""
-                                            class="w-full px-4 py-3 rounded-lg ring-red-200 focus:ring-4 focus:outline-none glass transition duration-300 border border-gray-300 focus:shadow-xl"
-                                            ><button
+                                            value=""><input type="text" placeholder="Delivery to" name="name"
+                                            required=""
+                                            class="w-full px-4 py-3 rounded-lg ring-red-200 focus:ring-4 focus:outline-none glass transition duration-300 border border-gray-300 focus:shadow-xl"><button
                                             class="w-full px-6 py-3 rounded-lg bg-orange-500 text-white poppins ring-red-300 focus:ring-4 transition duration-500">Save
                                             &amp; Continue</button></div>
                                 </form>
@@ -157,9 +243,11 @@
                                 <p class="poppins text-gray-700">Deliver Place : <span
                                         class="font-semibold text-black">-----</span></p>
                                 <p class="poppins text-gsray-700">Ariving in 20-30 min</p>
-                                <p class="poppins text-gray-700">Road <span class="font-semibold text-black">-----</span>
+                                <p class="poppins text-gray-700">Road <span
+                                        class="font-semibold text-black">-----</span>
                                 </p>
-                                <p class="poppins text-gray-700">Floor : <span class="font-semibold text-black">-----</span>
+                                <p class="poppins text-gray-700">Floor : <span
+                                        class="font-semibold text-black">-----</span>
                                 </p>
                                 <p class="poppins text-gray-700">Deliver to : <span
                                         class="font-semibold text-black">-----</span> </p>
@@ -167,7 +255,8 @@
                         </div>
                         <div class="hidden" id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
                             <div class="flex flex-col">
-                                <h1 class="text-2xl poppins pb-4 border-b border-gray-500 text-gray-700">Reserve Your Table</h1>
+                                <h1 class="text-2xl poppins pb-4 border-b border-gray-500 text-gray-700">Reserve Your
+                                    Table</h1>
                                 <form class="my-4">
                                     <div class="grid grid-cols-2 gap-4">
                                         <input type="text" placeholder="Full Name" name="fullname" required=""
@@ -188,48 +277,63 @@
                                         <input type="text" placeholder="Table Number" name="table" required=""
                                             class="w-full px-4 py-3 rounded-lg ring-red-200 focus:ring-4 focus:outline-none glass transition duration-300 border border-gray-300 focus:shadow-xl"
                                             value="">
-                                        </div>
-                                        <div class="mt-4">
-                                           <textarea id="special-request" name="request" required="" placeholder="Special Request"
+                                    </div>
+                                    <div class="mt-4">
+                                        <textarea id="special-request" name="request" required=""
+                                            placeholder="Special Request"
                                             class="w-full px-4 py-3 mt-2 rounded-lg ring-red-200 focus:ring-4 focus:outline-none glass transition duration-300 border border-gray-300 focus:shadow-xl"></textarea>
-                                        </div>
+                                    </div>
 
-                                        <button class="w-full px-6 py-3 rounded-lg bg-orange-500 text-white poppins ring-red-300 focus:ring-4 transition duration-500">
-                                            Save & Continue
-                                        </button>
+                                    <button
+                                        class="w-full px-6 py-3 rounded-lg bg-orange-500 text-white poppins ring-red-300 focus:ring-4 transition duration-500">
+                                        Save & Continue
+                                    </button>
                                 </form>
                             </div>
 
                             <div class="flex flex-col space-y-4 mb-3">
-                                <p class="poppins text-gsray-700">Your Full Name: <span class="font-semibold text-black">-----</span></p>
-                                <p class="poppins text-gray-700">Email Address: <span class="font-semibold text-black">-----</span></p>
-                                <p class="poppins text-gray-700">Phone Number: <span class="font-semibold text-black">-----</span></p>
-                                <p class="poppins text-gray-700">Number of Persons: <span class="font-semibold text-black">-----</span></p>
-                                <p class="poppins text-gray-700">Date: <span class="font-semibold text-black">-----</span></p>
-                                <p class="poppins text-gray-700">Table Number: <span class="font-semibold text-black">-----</span></p>
-                                <p class="poppins text-gray-700">Special Request: <span class="font-semibold text-black">-----</span></p>
-                            </div>                            
-                            
+                                <p class="poppins text-gsray-700">Your Full Name: <span
+                                        class="font-semibold text-black">-----</span></p>
+                                <p class="poppins text-gray-700">Email Address: <span
+                                        class="font-semibold text-black">-----</span></p>
+                                <p class="poppins text-gray-700">Phone Number: <span
+                                        class="font-semibold text-black">-----</span></p>
+                                <p class="poppins text-gray-700">Number of Persons: <span
+                                        class="font-semibold text-black">-----</span></p>
+                                <p class="poppins text-gray-700">Date: <span
+                                        class="font-semibold text-black">-----</span></p>
+                                <p class="poppins text-gray-700">Table Number: <span
+                                        class="font-semibold text-black">-----</span></p>
+                                <p class="poppins text-gray-700">Special Request: <span
+                                        class="font-semibold text-black">-----</span></p>
+                            </div>
+
                         </div>
                     </div>
 
-                    
+
                 </div>
                 <div class="col-span-1">
                     <div class="glass p-6 box-border rounded-lg">
 
                         <div class=" flex flex-col space-y-3 h-64 overflow-y-scroll orderContainer ">
-                            
+
                             <div class=" rounded-lg p-4 flex space-x-3">
-                                <div class="flex"><img class="w-24 object-contain"
-                                        src="../assets/imgs/dish.jpg" alt="food item"></div>
+                                <div class="flex">
+                                    <img class="md:w-24 object-contain" src="../assets/imgs/dish.jpg" alt="food item">
+                                </div>
                                 <div class="flex flex-col space-y-3 flex-grow">
                                     <h5 class="text-base poppins text-gray-700">Morning Fresh</h5>
                                     <h1 class="font-semibold text-lg text-primary poppins">Rs.200</h1>
                                     <p class="text-sm poppins text-gray-400">Breakfast</p>
                                 </div>
-                                <div class="flex items-center px-4 py-2 space-x-3"><span
-                                        class="text-lg text-gray-700 poppins select-none">1 items</span></div>
+                                <div class="flex items-center px-4 py-2 space-x-3">
+                                    <select aria-label="Select quantity" class="py-2 px-1 border border-gray-200 mr-6 focus:outline-none">
+                                        <option>01</option>
+                                        <option>02</option>
+                                        <option>03</option>
+                                    </select>
+                                </div>
                                 <div class="flex flex-col items-center justify-center"><svg stroke="currentColor"
                                         fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024"
                                         class="w-6 h-6 text-gray-600 transform transition hover:scale-105 duration-500 cursor-pointer"
@@ -252,9 +356,11 @@
                                     class="flex-grow poppins text-gray-700 text-xl">Total</span><span
                                     class="poppins font-semibold text-black text-xl">Rs.300</span></div>
                         </div>
-                        <div><button disabled=""
+                        <div><button data-modal-target="static-modal" data-modal-toggle="static-modal"
                                 class="w-full px-6 py-3 rounded-lg bg-orange-500 text-white poppins ring-red-300 focus:ring-4 transition duration-500 opacity-40">Place
-                                Order</button></div>
+                                Order
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -263,54 +369,14 @@
     <!-- / cart section ui -->
 
     <!-- footer section -->
-    <footer class="site-footer section-padding">
-        <div class="px-6 mx-auto">
-            <div class="flex items-center justify-between">
-                <a data-testid="logo" class="text-xl md:text-4xl font-semibold flex items-center " href="/">🍔 <span
-                        class="hidden md:block logo text-white font-bold text-2xl">FoodHunt</span></a>
-
-                <div class="flex -mx-2">
-                    <a href="#"
-                        class="mx-2  transition-colors duration-300 text-white hover:text-blue-500 dark:hover:text-blue-400"
-                        aria-label="Reddit">
-                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C21.9939 17.5203 17.5203 21.9939 12 22ZM6.807 10.543C6.20862 10.5433 5.67102 10.9088 5.45054 11.465C5.23006 12.0213 5.37133 12.6558 5.807 13.066C5.92217 13.1751 6.05463 13.2643 6.199 13.33C6.18644 13.4761 6.18644 13.6229 6.199 13.769C6.199 16.009 8.814 17.831 12.028 17.831C15.242 17.831 17.858 16.009 17.858 13.769C17.8696 13.6229 17.8696 13.4761 17.858 13.33C18.4649 13.0351 18.786 12.3585 18.6305 11.7019C18.475 11.0453 17.8847 10.5844 17.21 10.593H17.157C16.7988 10.6062 16.458 10.7512 16.2 11C15.0625 10.2265 13.7252 9.79927 12.35 9.77L13 6.65L15.138 7.1C15.1931 7.60706 15.621 7.99141 16.131 7.992C16.1674 7.99196 16.2038 7.98995 16.24 7.986C16.7702 7.93278 17.1655 7.47314 17.1389 6.94094C17.1122 6.40873 16.6729 5.991 16.14 5.991C16.1022 5.99191 16.0645 5.99491 16.027 6C15.71 6.03367 15.4281 6.21641 15.268 6.492L12.82 6C12.7983 5.99535 12.7762 5.993 12.754 5.993C12.6094 5.99472 12.4851 6.09583 12.454 6.237L11.706 9.71C10.3138 9.7297 8.95795 10.157 7.806 10.939C7.53601 10.6839 7.17843 10.5422 6.807 10.543ZM12.18 16.524C12.124 16.524 12.067 16.524 12.011 16.524C11.955 16.524 11.898 16.524 11.842 16.524C11.0121 16.5208 10.2054 16.2497 9.542 15.751C9.49626 15.6958 9.47445 15.6246 9.4814 15.5533C9.48834 15.482 9.52348 15.4163 9.579 15.371C9.62737 15.3318 9.68771 15.3102 9.75 15.31C9.81233 15.31 9.87275 15.3315 9.921 15.371C10.4816 15.7818 11.159 16.0022 11.854 16C11.9027 16 11.9513 16 12 16C12.059 16 12.119 16 12.178 16C12.864 16.0011 13.5329 15.7863 14.09 15.386C14.1427 15.3322 14.2147 15.302 14.29 15.302C14.3653 15.302 14.4373 15.3322 14.49 15.386C14.5985 15.4981 14.5962 15.6767 14.485 15.786V15.746C13.8213 16.2481 13.0123 16.5208 12.18 16.523V16.524ZM14.307 14.08H14.291L14.299 14.041C13.8591 14.011 13.4994 13.6789 13.4343 13.2429C13.3691 12.8068 13.6162 12.3842 14.028 12.2269C14.4399 12.0697 14.9058 12.2202 15.1478 12.5887C15.3899 12.9572 15.3429 13.4445 15.035 13.76C14.856 13.9554 14.6059 14.0707 14.341 14.08H14.306H14.307ZM9.67 14C9.11772 14 8.67 13.5523 8.67 13C8.67 12.4477 9.11772 12 9.67 12C10.2223 12 10.67 12.4477 10.67 13C10.67 13.5523 10.2223 14 9.67 14Z">
-                            </path>
-                        </svg>
+    <footer class="section-padding bg-black">
+        <div class="px-6 mx-auto py-10">
+            <div class="grid grid-cols-1 gap-6 sm:grid-cols-3 sm:gap-y-10 lg:grid-cols-4 justify-center justify-items-center">
+                <div class="sm:col-span-1">
+                    <a data-testid="logo" class="text-xl md:text-4xl font-semibold flex items-center " href="/">🍔 <span
+                            class="hidden md:block logo text-white font-bold text-2xl">FoodHunt</span>
                     </a>
-
-                    <a href="#"
-                        class="mx-2  transition-colors duration-300 text-white hover:text-blue-500 dark:hover:text-blue-400"
-                        aria-label="Facebook">
-                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M2.00195 12.002C2.00312 16.9214 5.58036 21.1101 10.439 21.881V14.892H7.90195V12.002H10.442V9.80204C10.3284 8.75958 10.6845 7.72064 11.4136 6.96698C12.1427 6.21332 13.1693 5.82306 14.215 5.90204C14.9655 5.91417 15.7141 5.98101 16.455 6.10205V8.56104H15.191C14.7558 8.50405 14.3183 8.64777 14.0017 8.95171C13.6851 9.25566 13.5237 9.68693 13.563 10.124V12.002H16.334L15.891 14.893H13.563V21.881C18.8174 21.0506 22.502 16.2518 21.9475 10.9611C21.3929 5.67041 16.7932 1.73997 11.4808 2.01722C6.16831 2.29447 2.0028 6.68235 2.00195 12.002Z">
-                            </path>
-                        </svg>
-                    </a>
-
-                    <a href="#"
-                        class="mx-2  transition-colors duration-300 text-white hover:text-blue-500 dark:hover:text-blue-400"
-                        aria-label="Github">
-                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M12.026 2C7.13295 1.99937 2.96183 5.54799 2.17842 10.3779C1.395 15.2079 4.23061 19.893 8.87302 21.439C9.37302 21.529 9.55202 21.222 9.55202 20.958C9.55202 20.721 9.54402 20.093 9.54102 19.258C6.76602 19.858 6.18002 17.92 6.18002 17.92C5.99733 17.317 5.60459 16.7993 5.07302 16.461C4.17302 15.842 5.14202 15.856 5.14202 15.856C5.78269 15.9438 6.34657 16.3235 6.66902 16.884C6.94195 17.3803 7.40177 17.747 7.94632 17.9026C8.49087 18.0583 9.07503 17.99 9.56902 17.713C9.61544 17.207 9.84055 16.7341 10.204 16.379C7.99002 16.128 5.66202 15.272 5.66202 11.449C5.64973 10.4602 6.01691 9.5043 6.68802 8.778C6.38437 7.91731 6.42013 6.97325 6.78802 6.138C6.78802 6.138 7.62502 5.869 9.53002 7.159C11.1639 6.71101 12.8882 6.71101 14.522 7.159C16.428 5.868 17.264 6.138 17.264 6.138C17.6336 6.97286 17.6694 7.91757 17.364 8.778C18.0376 9.50423 18.4045 10.4626 18.388 11.453C18.388 15.286 16.058 16.128 13.836 16.375C14.3153 16.8651 14.5612 17.5373 14.511 18.221C14.511 19.555 14.499 20.631 14.499 20.958C14.499 21.225 14.677 21.535 15.186 21.437C19.8265 19.8884 22.6591 15.203 21.874 10.3743C21.089 5.54565 16.9181 1.99888 12.026 2Z">
-                            </path>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-
-            <hr class="my-6 border-gray-200 md:my-8 ">
-
-            <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-y-10 lg:grid-cols-4">
-                <div class="sm:col-span-2">
-                    <h1 class="max-w-lg text-xl font-semibold tracking-tight  xl:text-2xl text-white">Location.</h1>
-                    <p class="text-white">121 Einstein Loop N, Bronx, NY 10475, United States</p>
+                    <span class="text-gray-400 text-sm">© 2024 BR Tech Solution Pvt. Ltd.</span>
                 </div>
 
                 <div>
@@ -318,169 +384,234 @@
 
                     <div class="flex flex-col items-start mt-5 space-y-2">
                         <a href="#"
-                            class="transition-colors duration-300 text-white dark:hover:text-blue-400 hover:underline hover:text-blue-500">Monday
+                            class="transition-colors duration-300 text-gray-400 dark:hover:text-blue-400 hover:underline hover:text-blue-500">Monday
                             - Friday</a>
                         <a href="#"
-                            class=" transition-colors duration-300 text-white dark:hover:text-blue-400 hover:underline hover:text-blue-500">10:00
+                            class=" transition-colors duration-300 text-gray-400 dark:hover:text-blue-400 hover:underline hover:text-blue-500">10:00
                             AM - 08:00 PM</a>
                         <a href="#"
-                            class=" transition-colors duration-300 text-white dark:hover:text-blue-400 hover:underline hover:text-blue-500">Tel:
+                            class=" transition-colors duration-300 text-gray-400 dark:hover:text-blue-400 hover:underline hover:text-blue-500">Tel:
                             010-02-0340</a>
                     </div>
                 </div>
 
                 <div>
-                    <p class="font-semibold text-white">Industries</p>
+                    <p class="font-semibold text-white">Contact us</p>
 
                     <div class="flex flex-col items-start mt-5 space-y-2">
                         <a href="#"
-                            class=" transition-colors duration-300 text-white dark:hover:text-blue-400 hover:underline hover:text-blue-500">Retail
-                            & E-Commerce</a>
+                            class=" transition-colors duration-300 text-gray-400 dark:hover:text-blue-400 hover:underline hover:text-blue-500">
+                            Help & Support
+                        </a>
                         <a href="#"
-                            class=" transition-colors duration-300 text-white dark:hover:text-blue-400 hover:underline hover:text-blue-500">Information
-                            Technology</a>
+                            class=" transition-colors duration-300 text-gray-400 dark:hover:text-blue-400 hover:underline hover:text-blue-500">
+                            Partner with us
+                        </a>
                         <a href="#"
-                            class=" transition-colors duration-300 text-white dark:hover:text-blue-400 hover:underline hover:text-blue-500">Finance
-                            & Insurance</a>
+                            class=" transition-colors duration-300 text-gray-400 dark:hover:text-blue-400 hover:underline hover:text-blue-500">
+                            Ride with us
+                        </a>
+                    </div>
+
+                    <div class="py-6">
+                        <p class="font-semibold text-white">Legal</p>
+    
+                        <div class="flex flex-col items-start mt-5 space-y-2">
+                            <a href="#"
+                                class=" transition-colors duration-300 text-gray-400 dark:hover:text-blue-400 hover:underline hover:text-blue-500">
+                              Terms & Conditions
+                            </a>
+                            <a href="#"
+                                class=" transition-colors duration-300 text-gray-400 dark:hover:text-blue-400 hover:underline hover:text-blue-500">
+                               Cookie Policy
+                            </a>
+                            <a href="#"
+                                class=" transition-colors duration-300 text-gray-400 dark:hover:text-blue-400 hover:underline hover:text-blue-500">
+                                Privacy Policy
+                            </a>
+                        </div>
                     </div>
                 </div>
+
+                <div>
+                    <p class="font-semibold  text-white">We deliver to:</p>
+
+                    <div class="flex flex-col items-start mt-5 space-y-2">
+                        <a href="#"
+                            class="transition-colors duration-300 text-gray-400 dark:hover:text-blue-400 hover:underline hover:text-blue-500">
+                            Bangalore
+                        </a>
+                        <a href="#"
+                            class="transition-colors duration-300 text-gray-400 dark:hover:text-blue-400 hover:underline hover:text-blue-500">
+                            Gurgaon
+                        </a>
+                        <a href="#"
+                            class="transition-colors duration-300 text-gray-400 dark:hover:text-blue-400 hover:underline hover:text-blue-500">
+                            Hyderabad
+                        </a>
+                        <a href="#"
+                            class="transition-colors duration-300 text-gray-400 dark:hover:text-blue-400 hover:underline hover:text-blue-500">
+                            Delhi
+                        </a>
+                        <a href="#"
+                            class="transition-colors duration-300 text-gray-400 dark:hover:text-blue-400 hover:underline hover:text-blue-500">
+                            Mumbai
+                        </a>
+                        <a href="#"
+                            class="transition-colors duration-300 text-gray-400 dark:hover:text-blue-400 hover:underline hover:text-blue-500">
+                            Pune
+                        </a>
+                        <select aria-label="Select quantity" class="py-2 px-1 bg-black text-sm text-gray-400 rounded-xl">
+                            <option>589  cities</option>
+                          </select>
+                    </div>
+                </div>
+
+                
             </div>
         </div>
     </footer>
     <!-- footer section -->
 
-
-    <!-- add to cart Modal Wrapper -->
-    <div id="food-modal" data-modal-backdrop="static" tabindex="-1" aria-hidden="true"
+    <!-- payment content section -->
+    <div id="static-modal" data-modal-backdrop="static" tabindex="-1" aria-hidden="true"
         class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
-        <div class="relative p-4 w-full max-w-screen-md max-h-full">
-            <!-- Modal content -->
-            <div class="relative bg-white rounded-lg shadow ">
-                <!-- Modal header -->
-                <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
-                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
-                        View Dish
-                    </h3>
-                    <button type="button"
-                        class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
-                        data-modal-hide="food-modal">
-                        <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                            viewBox="0 0 14 14">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
-                        </svg>
-                        <span class="sr-only">Close modal</span>
-                    </button>
-                </div>
-                <!-- Modal body -->
-                <div class="p-4 md:p-5 space-y-4">
-                    <main class="mx-auto px-6">
-                        <div class="flex flex-col justify-center items-center">
-                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10">
-                                <div class="order-2 md:order-1 lg:order-1 flex flex-col justify-center">
-                                    <h1
-                                        class="text-center md:text-left lg:text-left text-3xl lg:text-4xl font-semibold poppins pb-4 text-gray-700 select-none">
-                                        Morning Fresh
-                                    </h1>
-                                    <p
-                                        class="text-center md:text-left lg:text-left text-sm poppins text-gray-500 leading-relaxed select-none">
-                                        Gay one the what walk then she. Demesne mention promise you justice arrived
-                                        way.Amazing foods
-                                        are or and increasing to in especially inquietude companions acceptance
-                                        admiration.Outweigh it
-                                        families distance wandered ye..</p>
-                                    <div
-                                        class="flex items-center justify-center md:justify-start lg:justify-start space-x-6 pt-8">
-                                        <h1 class="text-3xl font-bold text-black poppins select-none">Rs. 280
-                                        </h1>
-                                        <div
-                                            class="flex items-center border border-gray-200 px-4 py-2 space-x-6 rounded-full">
-                                            <svg stroke="currentColor" fill="currentColor" stroke-width="0"
-                                                viewBox="0 0 1024 1024"
-                                                class="text-2xl bg-orange-400 w-8 h-8 rounded-full text-white hover:scale-105 transform transition duration-500 cursor-pointer p-1"
-                                                height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M872 474H152c-4.4 0-8 3.6-8 8v60c0 4.4 3.6 8 8 8h720c4.4 0 8-3.6 8-8v-60c0-4.4-3.6-8-8-8z">
-                                                </path>
-                                            </svg><span class="text-lg text-gray-700 poppins select-none">1</span><svg
-                                                stroke="currentColor" fill="currentColor" stroke-width="0"
-                                                t="1551322312294" viewBox="0 0 1024 1024" version="1.1"
-                                                class="text-2xl bg-orange-400 w-8 h-8 rounded-full text-white hover:scale-105 transform transition duration-500 cursor-pointer p-1"
-                                                height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                                                <defs></defs>
-                                                <path
-                                                    d="M474 152m8 0l60 0q8 0 8 8l0 704q0 8-8 8l-60 0q-8 0-8-8l0-704q0-8 8-8Z">
-                                                </path>
-                                                <path
-                                                    d="M168 474m8 0l672 0q8 0 8 8l0 60q0 8-8 8l-672 0q-8 0-8-8l0-60q0-8 8-8Z">
-                                                </path>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                    <div
-                                        class="mt-8 flex items-center justify-center md:justify-start lg:justify-start">
-                                        <button
-                                            class="flex items-center space-x-3 bg-orange-400 px-6 py-3 text-white poppins rounded-full ring-red-300 focus:outline-none focus:ring-4 transform transition duration-700 hover:scale-105"><svg
-                                                stroke="currentColor" fill="currentColor" stroke-width="0"
-                                                viewBox="0 0 16 16" class="text-xl" height="1em" width="1em"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z">
-                                                </path>
-                                            </svg><span>Add to Cart</span></button>
-                                    </div>
-                                </div>
-                                <div class="order-1 md:order-2 lg:order-2"><img src="https://www.tooplate.com/templates/2129_crispy_kitchen/images/breakfast/brett-jordan-8xt8-HIFqc8-unsplash.jpg"
-                                        class="w-3/4 md:w-3/4 lg:w-full mx-auto" alt="food"></div>
+        <div class="relative w-full max-w-2xl max-h-full">
+            
+            <div class="relative bg-white p-10 rounded-md">
+
+                <!-- payment content wrapper -->
+                <div class="w-full"
+                        style="max-width: 600px">
+                        <div class="mb-10 flex justify-between items-center">
+                            <h1 class="text-center font-bold text-xl uppercase">Secure payment info</h1>
+                            <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center" data-modal-hide="static-modal">
+                                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                                </svg>
+                                <span class="sr-only">Close modal</span>
+                            </button>
+                        </div>
+                        <div class="flex -mx-2">
+                            <div class="px-2">
+                                <label for="type1" class="flex items-center cursor-pointer">
+                                    <input type="radio" class="form-radio h-5 w-5 text-red-500" name="type"
+                                        id="type1" checked>
+                                    <img src="https://leadershipmemphis.org/wp-content/uploads/2020/08/780370.png"
+                                        class="h-8 ml-3">
+                                </label>
+                            </div>
+                            <div class="px-2">
+                                <label for="type2" class="flex items-center cursor-pointer">
+                                    <input type="radio" class="form-radio h-5 w-5 text-red-500" name="type"
+                                        id="type2">
+                                    <img src="https://www.sketchappsources.com/resources/source-image/PayPalCard.png"
+                                        class="h-8 ml-3">
+                                </label>
+                            </div>
+                            <div class="px-2">
+                                <label for="type2" class="flex items-center cursor-pointer">
+                                    <input type="radio" class="form-radio h-5 w-5 text-red-500" name="type"
+                                        id="type2">
+                                    <img src="https://www.sketchappsources.com/resources/source-image/PayPalCard.png"
+                                        class="h-8 ml-3">
+                                </label>
                             </div>
                         </div>
-                    </main>
-
+                        <div class="mb-3">
+                            <label class="font-bold text-sm mb-2 ml-1">Name on card</label>
+                            <div>
+                                <input
+                                    class="w-full px-3 py-2 mb-1 border-2 border-gray-200 rounded-md focus:outline-none focus:border-indigo-500 transition-colors"
+                                    placeholder="Rajesh Sharma" type="text" />
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="font-bold text-sm mb-2 ml-1">Card number</label>
+                            <div>
+                                <input
+                                    class="w-full px-3 py-2 mb-1 border-2 border-gray-200 rounded-md focus:outline-none focus:border-indigo-500 transition-colors"
+                                    placeholder="0000 0000 0000 0000" type="text" />
+                            </div>
+                        </div>
+                        <div class="mb-3 -mx-2 flex items-end">
+                            <div class="px-2 w-1/2">
+                                <label class="font-bold text-sm mb-2 ml-1">Expiration date</label>
+                                <div>
+                                    <select
+                                        class="form-select w-full px-3 py-2 mb-1 border-2 border-gray-200 rounded-md focus:outline-none focus:border-indigo-500 transition-colors cursor-pointer">
+                                        <option value="01">01 - January</option>
+                                        <option value="02">02 - February</option>
+                                        <option value="03">03 - March</option>
+                                        <option value="04">04 - April</option>
+                                        <option value="05">05 - May</option>
+                                        <option value="06">06 - June</option>
+                                        <option value="07">07 - July</option>
+                                        <option value="08">08 - August</option>
+                                        <option value="09">09 - September</option>
+                                        <option value="10">10 - October</option>
+                                        <option value="11">11 - November</option>
+                                        <option value="12">12 - December</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="px-2 w-1/2">
+                                <select
+                                    class="form-select w-full px-3 py-2 mb-1 border-2 border-gray-200 rounded-md focus:outline-none focus:border-indigo-500 transition-colors cursor-pointer">
+                                    <option value="2020">2020</option>
+                                    <option value="2021">2021</option>
+                                    <option value="2022">2022</option>
+                                    <option value="2023">2023</option>
+                                    <option value="2024">2024</option>
+                                    <option value="2025">2025</option>
+                                    <option value="2026">2026</option>
+                                    <option value="2027">2027</option>
+                                    <option value="2028">2028</option>
+                                    <option value="2029">2029</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="mb-10">
+                            <label class="font-bold text-sm mb-2 ml-1">Security code</label>
+                            <div>
+                                <input
+                                    class="w-32 px-3 py-2 mb-1 border-2 border-gray-200 rounded-md focus:outline-none focus:border-indigo-500 transition-colors"
+                                    placeholder="000" type="text" />
+                            </div>
+                        </div>
+                        <div>
+                            <button
+                                class="block w-full max-w-md mx-auto bg-orange-500 hover:bg-indigo-700 text-white rounded-lg px-4 py-4 font-semibold"><i
+                                    class="mdi mdi-lock-outline mr-1"></i> PAY NOW</button>
+                        </div>
                 </div>
-            </div>
-        </div>
-    </div>
-    <!-- / add to cart Modal Wrapper -->
+                <!-- / payment content wrapper -->
 
-    <!-- Reserve Table Modal -->
-    <div id="Reserve-Table-Modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
-        <div class="relative w-full max-w-screen-md max-h-full">
-            <div class="relative bg-white rounded-lg">
-                <button type="button" class="text-gray-900 bg-transparent right-5 top-5 absolute hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="Reserve-Table-Modal">
-                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
-                    </svg>
-                    <span class="sr-only">Close modal</span>
-                </button>
-                <!-- Modal body -->
-                <div class="p-3">
-                    <div>
-                        <div class="mt-3 text-center text-4xl font-bold">Reserve a Table</div>
-                        <div class="p-8">
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                                <input type="text" name="full_name" class="mt-1 block w-full md:w-1/2 rounded-md border border-slate-300 bg-white px-3 py-4 placeholder-slate-400 shadow-sm placeholder:font-semibold placeholder:text-gray-500 focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500 sm:text-sm" placeholder="Full Name *" />
-                                <input type="email" name="email" class="mt-1 block w-full md:w-1/2 rounded-md border border-slate-300 bg-white px-3 py-4 placeholder-slate-400 shadow-sm placeholder:font-semibold placeholder:text-gray-500 focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500 sm:text-sm" placeholder="Email Address *" />
-                                <input type="tel" name="phone" class="mt-1 block w-full md:w-1/2 rounded-md border border-slate-300 bg-white px-3 py-4 placeholder-slate-400 shadow-sm placeholder:font-semibold placeholder:text-gray-500 focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500 sm:text-sm" placeholder="Phone Number *" />
-                                <input type="number" name="num_persons" class="mt-1 block w-full md:w-1/2 rounded-md border border-slate-300 bg-white px-3 py-4 placeholder-slate-400 shadow-sm placeholder:font-semibold placeholder:text-gray-500 focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500 sm:text-sm" placeholder="Number of Persons *" />
-                                <input type="date" name="date" class="mt-1 block w-full md:w-1/2 rounded-md border border-slate-300 bg-white px-3 py-4 placeholder-slate-400 shadow-sm placeholder:font-semibold placeholder:text-gray-500 focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500 sm:text-sm" placeholder="Date *" />
-                                <input type="text" name="table_number" class="mt-1 block w-full md:w-1/2 rounded-md border border-slate-300 bg-white px-3 py-4 placeholder-slate-400 shadow-sm placeholder:font-semibold placeholder:text-gray-500 focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500 sm:text-sm" placeholder="Table Number *" />
+                <!-- order done message content -->
+                <div class="hidden">
+                    <div class="bg-white rounded-lg p-10 flex items-center shadow justify-between">
+                        <div>
+                            <svg class="mb-4 h-20 w-20 text-green-500 mx-auto" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                    
+                            <h2 class="text-2xl mb-4 text-gray-800 text-center font-bold">Order Confirmed</h2>
+                    
+                            <div class="text-gray-600 mb-8">
+                                Thank you for your order. Your delicious food is on its way!
                             </div>
-                            <textarea name="special_request" id="special_request" cols="30" rows="5" class="mt-1 block w-full rounded-md border border-slate-300 bg-white px-3 py-4 placeholder-slate-400 shadow-sm placeholder:font-semibold placeholder:text-gray-500 focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500 sm:text-sm" placeholder="Special Request"></textarea>
-                            <div class="text-center mt-6">
-                                <button type="submit" class="cursor-pointer rounded-lg bg-orange-500 px-8 py-5 text-md font-semibold text-white">
-                                    Reserve
-                                </button>
-                            </div>
+                    
+                            <button class="w-40 block mx-auto focus:outline-none py-2 px-5 rounded-lg shadow-sm text-center text-gray-600 bg-white hover:bg-gray-100 font-medium border">Back to Home</button>
                         </div>
                     </div>
                 </div>
+                <!-- / order done message content -->
                 
             </div>
         </div>
     </div>
-    <!-- / Reserve Table Modal -->
+    <!-- / payment content section -->
 
-    <!-- flowbite js -->
     <script src="../assets/flowbite/dist/flowbite.js"></script>
     <script src="../assets/flowbite/dist/flowbite.min.js"></script>
 </body>
